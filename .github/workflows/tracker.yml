@@ -1,0 +1,47 @@
+name: Step 2 Water Table Tracker
+
+on:
+  schedule:
+    - cron: '0 */2 * * *'   # every 2 hours, 24/7, free on GitHub
+  workflow_dispatch:          # lets you trigger a manual run anytime
+
+permissions:
+  contents: write             # needed to commit results.json back to the repo
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install Python dependencies
+        run: pip install playwright
+
+      - name: Install Chromium browser
+        run: playwright install chromium --with-deps
+
+      - name: Run scraper
+        env:
+          FB_EMAIL:           ${{ secrets.FB_EMAIL }}
+          FB_PASSWORD:        ${{ secrets.FB_PASSWORD }}
+          GMAIL_EMAIL:        ${{ secrets.GMAIL_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+          NOTIFY_EMAIL:       ${{ secrets.NOTIFY_EMAIL }}
+        run: python scraper.py
+
+      - name: Commit updated results.json
+        run: |
+          git config user.name  "tracker-bot"
+          git config user.email "action@github.com"
+          git add results.json
+          git diff --staged --quiet || git commit -m "chore: update results $(date -u '+%Y-%m-%d %H:%M UTC')"
+          git push
