@@ -1,5 +1,8 @@
-"new_price": 74.0,
+```json
+{
+  "new_price": 74.0,
   "threshold": 51.8,
   "last_checked": null,
   "listings": [],
   "history": []
+}
