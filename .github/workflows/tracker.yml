@@ -1,12 +1,15 @@
-name: Step 2 Water Table Tracker
+name: Deal Tracker
 
 on:
-  schedule:
-    - cron: '0 */2 * * *'   # every 2 hours, 24/7, free on GitHub
-  workflow_dispatch:          # lets you trigger a manual run anytime
+  workflow_dispatch:
+    inputs:
+      product_id:
+        description: 'Product ID to scrape (leave empty to run all)'
+        required: false
+        default: ''
 
 permissions:
-  contents: write             # needed to commit results.json back to the repo
+  contents: write
 
 jobs:
   track:
@@ -35,12 +38,13 @@ jobs:
           GMAIL_EMAIL:        ${{ secrets.GMAIL_EMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL:       ${{ secrets.NOTIFY_EMAIL }}
+          PRODUCT_ID:         ${{ github.event.inputs.product_id }}
         run: python scraper.py
 
-      - name: Commit updated results.json
+      - name: Commit updated results
         run: |
           git config user.name  "tracker-bot"
           git config user.email "action@github.com"
-          git add results.json
+          git add results/
           git diff --staged --quiet || git commit -m "chore: update results $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
