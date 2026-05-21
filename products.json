@@ -1,4 +1,13 @@
-
 {
-  "products": []
+  "products": [
+    {
+      "id": "nightstand-mpfyk0ky",
+      "name": "Nightstand",
+      "query": "nightstand",
+      "new_price": 80,
+      "threshold": 0.3,
+      "condition": "like_new",
+      "added_at": "2026-05-21T20:43:21.970Z"
+    }
+  ]
 }
