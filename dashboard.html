@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Step 2 Water Table — Deal Tracker</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:       #f7f7f5;
+    --surface:  #ffffff;
+    --border:   #e5e5e2;
+    --text:     #1a1a1a;
+    --muted:    #6b6b68;
+    --green:    #16a34a;
+    --green-bg: #f0fdf4;
+    --green-bd: #bbf7d0;
+    --amber:    #b45309;
+    --amber-bg: #fffbeb;
+    --red:      #dc2626;
+    --blue:     #1877f2;
+    --radius:   10px;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg:       #111110;
+      --surface:  #1c1c1a;
+      --border:   #2e2e2b;
+      --text:     #f0efe8;
+      --muted:    #8a8a85;
+      --green-bg: #052e16;
+      --green-bd: #14532d;
+      --amber-bg: #1c1200;
+    }
+  }
+
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+         background: var(--bg); color: var(--text); font-size: 15px; line-height: 1.5; }
+
+  .wrap { max-width: 860px; margin: 0 auto; padding: 24px 16px 60px; }
+
+  /* header */
+  .header { display: flex; align-items: flex-start; justify-content: space-between;
+            gap: 12px; flex-wrap: wrap; margin-bottom: 24px; }
+  .header h1 { font-size: 20px; font-weight: 600; letter-spacing: -0.3px; }
+  .header p  { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .pill { display: inline-flex; align-items: center; gap: 6px; font-size: 12px;
+          font-weight: 500; padding: 4px 12px; border-radius: 20px; border: 1px solid; }
+  .pill-green { color: var(--green); background: var(--green-bg); border-color: var(--green-bd); }
+  .pill-gray  { color: var(--muted); background: var(--bg); border-color: var(--border); }
+  .dot { width: 7px; height: 7px; border-radius: 50%; background: currentColor;
+         animation: pulse 2s infinite; }
+  @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+  /* metrics */
+  .metrics { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+             gap: 10px; margin-bottom: 20px; }
+  .metric { background: var(--surface); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 14px 16px; }
+  .metric-label { font-size: 12px; color: var(--muted); margin-bottom: 4px; }
+  .metric-value { font-size: 26px; font-weight: 600; letter-spacing: -0.5px; }
+  .metric-sub   { font-size: 12px; color: var(--muted); margin-top: 2px; }
+
+  /* deal alert banner */
+  .alert { background: var(--green-bg); border: 1px solid var(--green-bd);
+           border-radius: var(--radius); padding: 14px 18px; margin-bottom: 20px;
+           display: flex; gap: 12px; align-items: flex-start; }
+  .alert-icon { font-size: 22px; flex-shrink: 0; margin-top: 1px; }
+  .alert h3   { font-size: 14px; font-weight: 600; color: var(--green); margin-bottom: 2px; }
+  .alert p    { font-size: 13px; color: var(--green); }
+
+  /* filters */
+  .filter-row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;
+                margin-bottom: 14px; }
+  .filter-row label { font-size: 13px; color: var(--muted); }
+  select, button.refresh {
+    font-size: 13px; padding: 6px 12px; border-radius: 8px;
+    border: 1px solid var(--border); background: var(--surface);
+    color: var(--text); cursor: pointer; }
+  button.refresh { display: flex; align-items: center; gap: 6px; margin-left: auto; }
+  button.refresh:hover { background: var(--bg); }
+
+  /* listing cards */
+  .section-title { font-size: 13px; font-weight: 600; color: var(--muted);
+                   text-transform: uppercase; letter-spacing: .05em; margin-bottom: 10px; }
+  .cards { display: flex; flex-direction: column; gap: 10px; margin-bottom: 28px; }
+  .card { background: var(--surface); border: 1px solid var(--border);
+          border-radius: var(--radius); padding: 14px 16px;
+          display: flex; gap: 14px; align-items: center; flex-wrap: wrap;
+          transition: border-color .15s; }
+  .card:hover { border-color: #aaa; }
+  .card.hot { border: 2px solid var(--green); }
+  .card-info  { flex: 1; min-width: 180px; }
+  .card-title { font-size: 14px; font-weight: 500; margin-bottom: 4px; }
+  .card-meta  { font-size: 12px; color: var(--muted); display: flex; gap: 10px; flex-wrap: wrap; }
+  .card-price { text-align: right; flex-shrink: 0; }
+  .card-price-main { font-size: 22px; font-weight: 600; letter-spacing: -0.5px; }
+  .card-price-new  { font-size: 12px; color: var(--muted); text-decoration: line-through; }
+  .badge { display: inline-flex; align-items: center; font-size: 11px; font-weight: 500;
+           padding: 2px 9px; border-radius: 20px; border: 1px solid; }
+  .badge-green { color: var(--green); background: var(--green-bg); border-color: var(--green-bd); }
+  .badge-amber { color: var(--amber); background: var(--amber-bg); border-color: #fcd34d; }
+  .badge-gray  { color: var(--muted); background: var(--bg); border-color: var(--border); }
+  .disc-pill { font-size: 13px; font-weight: 600; padding: 3px 10px;
+               border-radius: 20px; margin-top: 6px; display: inline-block; }
+  .disc-hot { color: var(--green); background: var(--green-bg); }
+  .disc-ok  { color: var(--amber); background: var(--amber-bg); }
+  .view-btn { display: inline-block; margin-top: 8px; font-size: 12px; font-weight: 500;
+              color: var(--blue); text-decoration: none; }
+  .view-btn:hover { text-decoration: underline; }
+  .empty { text-align: center; color: var(--muted); padding: 32px 0; font-size: 14px; }
+
+  /* history chart */
+  .chart-wrap { background: var(--surface); border: 1px solid var(--border);
+                border-radius: var(--radius); padding: 18px 20px; }
+  .chart-wrap h2 { font-size: 14px; font-weight: 600; margin-bottom: 14px; }
+  .chart-canvas-wrap { position: relative; height: 160px; }
+
+  /* footer */
+  .footer { text-align: center; font-size: 12px; color: var(--muted); margin-top: 36px; }
+  .spinner { display: inline-block; width: 20px; height: 20px; border: 2px solid var(--border);
+             border-top-color: var(--green); border-radius: 50%;
+             animation: spin .7s linear infinite; }
+  @keyframes spin { to { transform: rotate(360deg); } }
+  #loading { text-align: center; padding: 60px 0; }
+  #error   { display: none; color: var(--red); text-align: center; padding: 40px 0; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="header">
+    <div>
+      <h1>Step 2 Water Table — Deal Tracker</h1>
+      <p id="subtitle">📍 Markham / Richmond Hill · Facebook Marketplace</p>
+    </div>
+    <span class="pill pill-green" id="status-pill">
+      <span class="dot"></span> Live
+    </span>
+  </div>
+
+  <div id="loading"><div class="spinner"></div><p style="margin-top:12px;color:var(--muted);font-size:13px">Loading results…</p></div>
+  <div id="error">⚠️ Could not load results.json.<br><small>Make sure the scraper has run at least once.</small></div>
+
+  <div id="app" style="display:none">
+    <div id="alert-box"></div>
+
+    <div class="metrics">
+      <div class="metric">
+        <div class="metric-label">New price (Walmart.ca)</div>
+        <div class="metric-value" id="m-new-price">—</div>
+        <div class="metric-sub">CAD</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Deal threshold (30% off)</div>
+        <div class="metric-value" id="m-threshold">—</div>
+        <div class="metric-sub">or below</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Listings found</div>
+        <div class="metric-value" id="m-count">—</div>
+        <div class="metric-sub" id="m-count-sub">this run</div>
+      </div>
+      <div class="metric">
+        <div class="metric-label">Deals matched</div>
+        <div class="metric-value" id="m-deals">—</div>
+        <div class="metric-sub">like new + 30%+ off</div>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <label>Condition:</label>
+      <select id="f-cond">
+        <option value="all">All conditions</option>
+        <option value="like_new">Like new only</option>
+        <option value="good">Good or better</option>
+      </select>
+      <label>Sort:</label>
+      <select id="f-sort">
+        <option value="discount">Biggest discount</option>
+        <option value="price">Lowest price</option>
+      </select>
+      <button class="refresh" onclick="loadData()">
+        ↻ Refresh
+      </button>
+    </div>
+
+    <div class="section-title" id="listings-title">Current listings</div>
+    <div class="cards" id="cards"></div>
+
+    <div class="chart-wrap">
+      <h2>Activity — last 48 checks</h2>
+      <div class="chart-canvas-wrap">
+        <canvas id="histChart" role="img" aria-label="Line chart of listings and deals found over the last 48 scraper runs"></canvas>
+      </div>
+    </div>
+
+    <div class="footer" id="footer"></div>
+  </div>
+
+</div>
+<script>
+let chartInst = null;
+let cachedData = null;
+
+async function loadData() {
+  document.getElementById('loading').style.display = 'block';
+  document.getElementById('app').style.display = 'none';
+  document.getElementById('error').style.display = 'none';
+
+  try {
+    const res = await fetch('./results.json?_=' + Date.now());
+    if (!res.ok) throw new Error('fetch failed');
+    cachedData = await res.json();
+    render(cachedData);
+  } catch(e) {
+    document.getElementById('loading').style.display = 'none';
+    document.getElementById('error').style.display = 'block';
+  }
+}
+
+function render(data) {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('app').style.display = 'block';
+
+  const np = data.new_price || 74;
+  const thresh = data.threshold || (np * 0.70);
+  const listings = data.listings || [];
+  const deals = listings.filter(l => l.is_deal);
+
+  // metrics
+  document.getElementById('m-new-price').textContent = '$' + np.toFixed(0);
+  document.getElementById('m-threshold').textContent = '$' + thresh.toFixed(0);
+  document.getElementById('m-count').textContent = listings.length;
+  document.getElementById('m-deals').textContent = deals.length;
+
+  // last checked
+  const checked = data.last_checked ? new Date(data.last_checked) : null;
+  if (checked) {
+    const rel = timeAgo(checked);
+    document.getElementById('footer').innerHTML =
+      '↻ Last checked ' + rel + ' · auto-refreshes every 2 hrs via GitHub Actions';
+    document.getElementById('subtitle').textContent =
+      '📍 Markham / Richmond Hill · Facebook Marketplace · checked ' + rel;
+  }
+
+  // deal alert banner
+  const alertBox = document.getElementById('alert-box');
+  if (deals.length > 0) {
+    alertBox.innerHTML = `<div class="alert">
+      <div class="alert-icon">🎯</div>
+      <div>
+        <h3>${deals.length} deal${deals.length > 1 ? 's' : ''} found this run!</h3>
+        <p>An email was sent to acct4wedding@gmail.com with the listing link${deals.length > 1 ? 's' : ''}.</p>
+      </div>
+    </div>`;
+  } else {
+    alertBox.innerHTML = '';
+  }
+
+  renderCards(listings, np);
+  renderChart(data.history || []);
+}
+
+function renderCards(listings, np) {
+  const cond = document.getElementById('f-cond').value;
+  const sort = document.getElementById('f-sort').value;
+
+  let filtered = listings.filter(l => {
+    if (cond === 'like_new') return l.condition === 'like_new';
+    if (cond === 'good')     return ['like_new','good'].includes(l.condition);
+    return true;
+  });
+
+  filtered.sort((a, b) => sort === 'price' ? a.price - b.price : b.discount - a.discount);
+
+  document.getElementById('listings-title').textContent =
+    `Current listings (${filtered.length})`;
+
+  const container = document.getElementById('cards');
+  if (filtered.length === 0) {
+    container.innerHTML = '<div class="empty">No listings match the current filters.</div>';
+    return;
+  }
+
+  container.innerHTML = filtered.map(l => {
+    const hot = l.is_deal;
+    const badgeCls = l.condition === 'like_new' ? 'badge-green'
+                   : l.condition === 'good'     ? 'badge-amber' : 'badge-gray';
+    const discCls = hot ? 'disc-hot' : 'disc-ok';
+    const hotBadge = hot
+      ? '<span class="badge badge-green" style="margin-right:6px">🔥 Hot deal</span>' : '';
+
+    return `<div class="card${hot ? ' hot' : ''}">
+      <div class="card-info">
+        <div style="margin-bottom:6px">${hotBadge}<span class="badge ${badgeCls}">${l.condLabel || 'Unknown'}</span></div>
+        <div class="card-title">${l.title}</div>
+        <div class="card-meta">
+          <span>📍 ${l.location || 'Nearby'}</span>
+          <span>🕐 ${l.scraped_at ? timeAgo(new Date(l.scraped_at)) : 'recently'}</span>
+        </div>
+        <a class="view-btn" href="${l.link}" target="_blank" rel="noopener">
+          View on Facebook Marketplace →
+        </a>
+      </div>
+      <div class="card-price">
+        <div class="card-price-main">$${l.price.toFixed(0)} <span style="font-size:13px;font-weight:400">CAD</span></div>
+        <div class="card-price-new">New: $${np.toFixed(0)}</div>
+        <div class="disc-pill ${discCls}">${l.discount.toFixed(0)}% off</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderChart(history) {
+  if (!history.length) return;
+  const labels  = history.map(h => {
+    const d = new Date(h.checked_at);
+    return d.toLocaleDateString('en-CA', {month:'short', day:'numeric'}) + ' ' +
+           d.toLocaleTimeString('en-CA', {hour:'2-digit', minute:'2-digit', hour12:false});
+  });
+  const counts  = history.map(h => h.count);
+  const deals   = history.map(h => h.deals);
+
+  if (chartInst) { chartInst.destroy(); }
+
+  chartInst = new Chart(document.getElementById('histChart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [
+        {
+          label: 'Listings',
+          data: counts,
+          borderColor: '#94a3b8',
+          backgroundColor: 'rgba(148,163,184,.15)',
+          borderWidth: 1.5,
+          pointRadius: 2,
+          tension: 0.3,
+          fill: true,
+        },
+        {
+          label: 'Deals (like new + 30%+ off)',
+          data: deals,
+          borderColor: '#16a34a',
+          backgroundColor: 'rgba(22,163,74,.15)',
+          borderWidth: 2,
+          pointRadius: 3,
+          tension: 0.3,
+          fill: true,
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { mode: 'index', intersect: false }
+      },
+      scales: {
+        x: { ticks: { maxTicksLimit: 8, maxRotation: 0, font: { size: 11 } },
+             grid: { color: 'rgba(128,128,128,.1)' } },
+        y: { beginAtZero: true, ticks: { stepSize: 1, font: { size: 11 } },
+             grid: { color: 'rgba(128,128,128,.1)' } }
+      }
+    }
+  });
+}
+
+function timeAgo(date) {
+  const diff = Math.floor((Date.now() - date) / 1000);
+  if (diff < 60)   return 'just now';
+  if (diff < 3600) return Math.floor(diff / 60) + ' min ago';
+  if (diff < 86400) return Math.floor(diff / 3600) + ' hr ago';
+  return Math.floor(diff / 86400) + ' days ago';
+}
+
+document.getElementById('f-cond').addEventListener('change', () => cachedData && renderCards(cachedData.listings, cachedData.new_price));
+document.getElementById('f-sort').addEventListener('change', () => cachedData && renderCards(cachedData.listings, cachedData.new_price));
+
+// auto-refresh every 30 min
+setInterval(loadData, 30 * 60 * 1000);
+
+loadData();
+</script>
+</body>
+</html>
