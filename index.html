@@ -173,11 +173,14 @@
 
     <div class="filter-row">
       <label>Condition:</label>
-      <select id="f-cond">
-        <option value="all">All conditions</option>
-        <option value="like_new">Like new only</option>
-        <option value="good">Good or better</option>
-      </select>
+     <select id="f-cond">
+  <option value="all">All conditions</option>
+  <option value="new">New only</option>
+  <option value="like_new">Like new only</option>
+  <option value="good">Good or better</option>
+  <option value="fair">Fair or better</option>
+  <option value="unknown">Unknown only</option>
+</select>
       <label>Sort:</label>
       <select id="f-sort">
         <option value="discount">Biggest discount</option>
@@ -269,10 +272,14 @@ function renderCards(listings, np) {
   const cond = document.getElementById('f-cond').value;
   const sort = document.getElementById('f-sort').value;
 
-  let filtered = listings.filter(l => {
-    if (cond === 'like_new') return l.condition === 'like_new';
-    if (cond === 'good')     return ['like_new','good'].includes(l.condition);
-    return true;
+ let filtered = listings.filter(l => {
+  if (cond === 'new')      return l.condition === 'new';
+  if (cond === 'like_new') return l.condition === 'like_new';
+  if (cond === 'good')     return ['new','like_new','good'].includes(l.condition);
+  if (cond === 'fair')     return ['new','like_new','good','fair'].includes(l.condition);
+  if (cond === 'unknown')  return l.condition === 'unknown';
+  return true;
+});
   });
 
   filtered.sort((a, b) => sort === 'price' ? a.price - b.price : b.discount - a.discount);
