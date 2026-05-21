@@ -1,8 +1,14 @@
-```json
 {
   "new_price": 74.0,
   "threshold": 51.8,
-  "last_checked": null,
+  "last_checked": "2026-05-21T17:13:25.834723",
   "listings": [],
-  "history": []
+  "history": [
+    {
+      "checked_at": "2026-05-21T17:13:25.834707",
+      "new_price": 74.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
 }
