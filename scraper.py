@@ -50,17 +50,68 @@ async def get_new_price(page):
 # ── 2. Facebook login ──────────────────────────────────────────────────────
 async def fb_login(page):
     await page.goto("https://www.facebook.com/", wait_until="domcontentloaded", timeout=30_000)
-    await page.wait_for_timeout(2_000)
-    for btn_txt in ["Accept all", "Allow all cookies", "Only allow essential cookies"]:
+    await page.wait_for_timeout(3_000)
+
+    # dismiss any overlay/consent dialogs aggressively
+    for btn_txt in ["Accept all", "Allow all cookies", "Allow essential and optional cookies",
+                    "Only allow essential cookies", "Decline optional cookies", "Close"]:
         try:
-            await page.click(f'button:has-text("{btn_txt}")', timeout=3_000)
-            break
+            await page.click(f'button:has-text("{btn_txt}")', timeout=2_000)
+            await page.wait_for_timeout(1_000)
         except:
             pass
-    await page.fill('#email', FB_EMAIL)
-    await page.fill('#pass', FB_PASSWORD)
-    await page.click('[name="login"]')
-    await page.wait_for_timeout(5_000)
+
+    # wait for email field with multiple selector fallbacks
+    email_sel = None
+    for sel in ['input[name="email"]', '#email', 'input[type="email"]', 'input[autocomplete="username"]']:
+        try:
+            await page.wait_for_selector(sel, timeout=5_000)
+            email_sel = sel
+            break
+        except:
+            continue
+
+    if not email_sel:
+        # try going directly to login page
+        await page.goto("https://www.facebook.com/login/", wait_until="domcontentloaded", timeout=30_000)
+        await page.wait_for_timeout(3_000)
+        for sel in ['input[name="email"]', '#email', 'input[type="email"]']:
+            try:
+                await page.wait_for_selector(sel, timeout=5_000)
+                email_sel = sel
+                break
+            except:
+                continue
+
+    if not email_sel:
+        raise RuntimeError("Could not find Facebook login form — FB may be blocking headless browsers")
+
+    await page.fill(email_sel, FB_EMAIL)
+
+    pass_sel = None
+    for sel in ['input[name="pass"]', '#pass', 'input[type="password"]']:
+        try:
+            await page.wait_for_selector(sel, timeout=3_000)
+            pass_sel = sel
+            break
+        except:
+            continue
+
+    if not pass_sel:
+        raise RuntimeError("Could not find Facebook password field")
+
+    await page.fill(pass_sel, FB_PASSWORD)
+    await page.wait_for_timeout(500)
+
+    for sel in ['[name="login"]', 'button[type="submit"]', 'input[type="submit"]']:
+        try:
+            await page.click(sel, timeout=3_000)
+            break
+        except:
+            continue
+
+    await page.wait_for_timeout(6_000)
+
     if "checkpoint" in page.url or "two_step" in page.url:
         raise RuntimeError(
             "Facebook is asking for 2FA — disable it on this account, "
