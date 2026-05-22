@@ -1,0 +1,354 @@
+{
+  "product": {
+    "id": "console-desk-mpgfapf5",
+    "name": "console desk",
+    "query": "console desk",
+    "new_price": 60,
+    "threshold": 0.3,
+    "condition": "like_new",
+    "added_at": "2026-05-22T04:32:01.073Z"
+  },
+  "new_price": 60.0,
+  "threshold": 42.0,
+  "last_checked": "2026-05-22T04:34:53.554681",
+  "listings": [
+    {
+      "title": "Console table",
+      "price": 1.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 98.3,
+      "link": "https://www.facebook.com/marketplace/item/1257497672774229/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.083776"
+    },
+    {
+      "title": "Decorative Furniture << Console With LED lights >>",
+      "price": 1.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 98.3,
+      "link": "https://www.facebook.com/marketplace/item/3265152610351306/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.100306"
+    },
+    {
+      "title": "Glass Top Console table ll Gold and Chrome bases || Sale!",
+      "price": 1.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 98.3,
+      "link": "https://www.facebook.com/marketplace/item/963766316385623/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.185619"
+    },
+    {
+      "title": "Newmarket, ON",
+      "price": 10.0,
+      "location": "Newmarket, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 83.3,
+      "link": "https://www.facebook.com/marketplace/item/1353310239991948/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.296980"
+    },
+    {
+      "title": "IKEA MICKE Desk + Extra Tabletop Extension",
+      "price": 20.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 66.7,
+      "link": "https://www.facebook.com/marketplace/item/1517577363363645/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.262048"
+    },
+    {
+      "title": "Whitchurch-Stouffville, ON",
+      "price": 30.0,
+      "location": "Whitchurch-Stouffville, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 50.0,
+      "link": "https://www.facebook.com/marketplace/item/3883167261986243/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.950445"
+    },
+    {
+      "title": "Vaughan, ON",
+      "price": 40.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 33.3,
+      "link": "https://www.facebook.com/marketplace/item/989122210239793/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.350255"
+    },
+    {
+      "title": "Console table",
+      "price": 50.0,
+      "location": "Aurora, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 16.7,
+      "link": "https://www.facebook.com/marketplace/item/2049386822644424/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.020168"
+    },
+    {
+      "title": "New 44\u201d Console Table with Storage, White Faux Marble Sofa Side Table with Gold ",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 16.7,
+      "link": "https://www.facebook.com/marketplace/item/924454033923693/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.152510"
+    },
+    {
+      "title": "Console Table",
+      "price": 55.0,
+      "location": "Aurora, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 8.3,
+      "link": "https://www.facebook.com/marketplace/item/1351641713443700/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.897982"
+    },
+    {
+      "title": "Dark wood console table with lyre base and drawers",
+      "price": 60.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/1581435576229884/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.934399"
+    },
+    {
+      "title": "Markham, ON",
+      "price": 60.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/822264294276506/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.334190"
+    },
+    {
+      "title": "new Narrow Console Table with Drawers and Open Storage Shelf-White",
+      "price": 70.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -16.7,
+      "link": "https://www.facebook.com/marketplace/item/1446517620276757/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.916930"
+    },
+    {
+      "title": "Black Console Hallway Table",
+      "price": 75.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -25.0,
+      "link": "https://www.facebook.com/marketplace/item/1595620508336950/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.051785"
+    },
+    {
+      "title": "Glass top desk with drawer",
+      "price": 75.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -25.0,
+      "link": "https://www.facebook.com/marketplace/item/1483977139828600/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.381621"
+    },
+    {
+      "title": "White console",
+      "price": 80.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -33.3,
+      "link": "https://www.facebook.com/marketplace/item/1296388322088394/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.878761"
+    },
+    {
+      "title": "Light Wood Desk with Detachable Hutach",
+      "price": 80.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -33.3,
+      "link": "https://www.facebook.com/marketplace/item/833864085819993/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.315563"
+    },
+    {
+      "title": "Markham, ON",
+      "price": 85.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -41.7,
+      "link": "https://www.facebook.com/marketplace/item/725062897268206/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.067697"
+    },
+    {
+      "title": "46inch dark walnut console/entry/vanity table",
+      "price": 100.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -66.7,
+      "link": "https://www.facebook.com/marketplace/item/852963397726509/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.969154"
+    },
+    {
+      "title": "Console table with cabinet",
+      "price": 100.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -66.7,
+      "link": "https://www.facebook.com/marketplace/item/1598536354777554/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:52.988663"
+    },
+    {
+      "title": "Toronto, ON",
+      "price": 108.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -80.0,
+      "link": "https://www.facebook.com/marketplace/item/1706453190773864/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.221713"
+    },
+    {
+      "title": "console table and mirror",
+      "price": 120.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -100.0,
+      "link": "https://www.facebook.com/marketplace/item/835484142352889/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.136227"
+    },
+    {
+      "title": "Console Table",
+      "price": 120.0,
+      "location": "Ajax, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -100.0,
+      "link": "https://www.facebook.com/marketplace/item/1555921019878186/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.168941"
+    },
+    {
+      "title": "console tabel with mirror",
+      "price": 130.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -116.7,
+      "link": "https://www.facebook.com/marketplace/item/2476951819487502/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.240970"
+    },
+    {
+      "title": "Richmond Hill, ON",
+      "price": 140.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -133.3,
+      "link": "https://www.facebook.com/marketplace/item/1260948532481426/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.004444"
+    },
+    {
+      "title": "Console table",
+      "price": 140.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -133.3,
+      "link": "https://www.facebook.com/marketplace/item/1644895929881785/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.205187"
+    },
+    {
+      "title": "Modern Clear Glass Waterfall Console Table \u2013 Minimalist Entryway Desk",
+      "price": 150.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -150.0,
+      "link": "https://www.facebook.com/marketplace/item/3472120086272942/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.116536"
+    },
+    {
+      "title": "Electric Height Adjustable Desk Costco",
+      "price": 200.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -233.3,
+      "link": "https://www.facebook.com/marketplace/item/2052144059066305/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.366066"
+    },
+    {
+      "title": "Electrical Standing Desk",
+      "price": 220.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -266.7,
+      "link": "https://www.facebook.com/marketplace/item/1998727070723635/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.277681"
+    },
+    {
+      "title": "Console solid wood beautiful entry table.",
+      "price": 280.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -366.7,
+      "link": "https://www.facebook.com/marketplace/item/1330885888887901/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Af1727202-35e2-407f-bd16-4243fe824d38&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:34:53.036341"
+    }
+  ],
+  "history": [
+    {
+      "checked_at": "2026-05-22T04:34:53.554663",
+      "new_price": 60.0,
+      "count": 30,
+      "deals": 0
+    }
+  ]
+}
