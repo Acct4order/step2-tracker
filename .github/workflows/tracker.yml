@@ -48,3 +48,10 @@ jobs:
           git add results/
           git diff --staged --quiet || git commit -m "chore: update results $(date -u '+%Y-%m-%d %H:%M UTC')"
           git push
+          
+- name: Upload debug screenshots
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: debug-screenshots
+          path: "debug_*.png"
