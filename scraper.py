@@ -29,6 +29,20 @@ GOOD_KW     = ["good condition", "good shape", "great condition",
 FAIR_KW     = ["fair condition", "fair shape", "some wear",
                "some scratches", "shows wear", "needs cleaning"]
 
+# ── relevance filter ──────────────────────────────────────────────────────
+def is_relevant(title, query):
+    t = title.lower()
+    q = query.lower()
+    # exact phrase match
+    if q in t:
+        return True
+    # require at least half the meaningful words to appear in the title
+    words = [w for w in q.split() if len(w) > 2]
+    if not words:
+        return True
+    matches = sum(1 for w in words if w in t)
+    return matches >= max(2, len(words) // 2)
+
 def classify_condition(text):
     t = text.lower()
     if any(k in t for k in NEW_KW):      return "new",      "New"
@@ -173,6 +187,10 @@ async def scrape_product(page, product, new_price):
             location = next(
                 (t for t in texts if any(c in t for c in CITY_NAMES)), "Nearby"
             )
+
+            # skip listings that don't match the query keywords
+            if not is_relevant(title, query):
+                continue
 
             cond, cond_label = classify_condition(title)
             discount = (new_price - price) / new_price
