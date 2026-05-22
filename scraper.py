@@ -5,25 +5,20 @@ from datetime import datetime
 from playwright.async_api import async_playwright
 
 # ── credentials ───────────────────────────────────────────────────────────
-FB_EMAIL     = os.environ["FB_EMAIL"]
-FB_PASSWORD  = os.environ["FB_PASSWORD"]
+FB_COOKIES   = os.environ["FB_COOKIES"]         # JSON from Cookie-Editor
 GMAIL_EMAIL  = os.environ["GMAIL_EMAIL"]
 GMAIL_APP_PW = os.environ["GMAIL_APP_PASSWORD"]
 NOTIFY_EMAIL = os.environ.get("NOTIFY_EMAIL", GMAIL_EMAIL)
-
-# run a single product id if provided, otherwise run all
 TARGET_ID    = os.environ.get("PRODUCT_ID", "").strip()
 
-# ── location: central point covering all 5 cities ─────────────────────────
-# Markham · Richmond Hill · Vaughan · Aurora · Newmarket
-CENTER_LAT   = 43.9225
-CENTER_LNG   = -79.4374
-RADIUS_KM    = 40
+# ── location: center of Markham/RH/Vaughan/Aurora/Newmarket ──────────────
+CENTER_LAT = 43.9225
+CENTER_LNG = -79.4374
+RADIUS_KM  = 40
+CITY_NAMES = ["Markham", "Richmond Hill", "Vaughan", "Aurora",
+              "Newmarket", "Thornhill", "Unionville", "Stouffville", "ON"]
 
-CITY_NAMES   = ["Markham", "Richmond Hill", "Vaughan", "Aurora",
-                "Newmarket", "Thornhill", "Unionville", "Stouffville", "ON"]
-
-RESULTS_DIR  = "results"
+RESULTS_DIR = "results"
 
 # ── condition keywords ────────────────────────────────────────────────────
 NEW_KW      = ["brand new", "new in box", "sealed", "unopened", "never opened"]
@@ -75,78 +70,46 @@ async def get_new_price(page, query, fallback_price):
     print(f"   Using manual price: ${fallback_price:.2f} CAD")
     return float(fallback_price)
 
-# ── 2. Facebook login ─────────────────────────────────────────────────────
-async def fb_login(page):
-    await page.goto("https://www.facebook.com/login/",
-                    wait_until="domcontentloaded", timeout=30000)
-    await page.wait_for_timeout(3000)
+# ── 2. Facebook login via cookies ─────────────────────────────────────────
+async def fb_login(ctx, page):
+    raw = json.loads(FB_COOKIES)
 
-    for btn in ["Accept all", "Allow all cookies",
-                "Allow essential and optional cookies",
-                "Only allow essential cookies"]:
-        try:
-            await page.click(f'button:has-text("{btn}")', timeout=2000)
-            await page.wait_for_timeout(800)
-        except Exception:
-            pass
+    cookies = []
+    for c in raw:
+        ck = {
+            "name":   c["name"],
+            "value":  c["value"],
+            "domain": c.get("domain", ".facebook.com"),
+            "path":   c.get("path", "/"),
+        }
+        if "expirationDate" in c:
+            ck["expires"] = float(c["expirationDate"])
+        if "secure"   in c: ck["secure"]   = c["secure"]
+        if "httpOnly" in c: ck["httpOnly"] = c["httpOnly"]
+        if "sameSite" in c:
+            ss = str(c["sameSite"]).capitalize()
+            if ss in ("Strict", "Lax", "None"):
+                ck["sameSite"] = ss
+        cookies.append(ck)
 
-    email_sel = None
-    for sel in ['input[name="email"]', "#email",
-                'input[type="email"]', 'input[autocomplete="username"]']:
-        try:
-            await page.wait_for_selector(sel, timeout=5000)
-            email_sel = sel
-            break
-        except Exception:
-            continue
-    if not email_sel:
-        raise RuntimeError("Could not find Facebook login form")
+    await ctx.add_cookies(cookies)
 
-    await page.fill(email_sel, FB_EMAIL)
+    await page.goto("https://www.facebook.com/", wait_until="domcontentloaded", timeout=30000)
+    await page.wait_for_timeout(2000)
 
-    pass_sel = None
-    for sel in ['input[name="pass"]', "#pass", 'input[type="password"]']:
-        try:
-            await page.wait_for_selector(sel, timeout=3000)
-            pass_sel = sel
-            break
-        except Exception:
-            continue
-    if not pass_sel:
-        raise RuntimeError("Could not find Facebook password field")
-
-    await page.fill(pass_sel, FB_PASSWORD)
-    await page.wait_for_timeout(500)
-
-    for sel in ['[name="login"]', 'button[type="submit"]', 'input[type="submit"]']:
-        try:
-            await page.click(sel, timeout=3000)
-            break
-        except Exception:
-            continue
-
-    await page.wait_for_timeout(6000)
-
-    url = page.url
-    print(f"   URL after login: {url}")
-
-    if "checkpoint" in url or "two_step" in url:
-        raise RuntimeError("Facebook is asking for 2FA — disable it on this account")
-
-    # still on login page = credentials rejected or IP blocked
-    if "login" in url or url.rstrip("/").endswith("facebook.com"):
+    if "login" in page.url:
         raise RuntimeError(
-            "Login failed — Facebook rejected the credentials or blocked this IP. "
-            "Check your FB_PASSWORD secret, or try logging in manually to unblock the account."
+            "Cookies are invalid or expired — re-export from Cookie-Editor and update FB_COOKIES secret"
         )
-
-    print("   Facebook login OK")
+    print("   Facebook login OK (cookie auth)")
 
 # ── 3. scrape one product ─────────────────────────────────────────────────
 async def scrape_product(page, product, new_price):
-    query = product["query"]
+    query     = product["query"]
     threshold = float(product.get("threshold", 0.30))
     target_cond = product.get("condition", "like_new")
+    cond_rank = {"new": 4, "like_new": 3, "good": 2, "fair": 1, "unknown": 0}
+    target_rank = cond_rank.get(target_cond, 3)
 
     urls = [
         "https://www.facebook.com/marketplace/markham/search/?query=" + query.replace(" ", "+"),
@@ -171,14 +134,11 @@ async def scrape_product(page, product, new_price):
     print(f"   Found {len(anchors)} raw anchor(s)")
     print(f"   Page URL: {page.url}")
     print(f"   Page title: {await page.title()}")
-    # print a sample of all hrefs on the page for debugging
     all_links = await page.query_selector_all('a[href]')
     sample = [await a.get_attribute('href') for a in all_links[:8]]
     print(f"   Sample hrefs: {sample}")
 
     seen, listings = set(), []
-    cond_rank = {"new": 4, "like_new": 3, "good": 2, "fair": 1, "unknown": 0}
-    target_rank = cond_rank.get(target_cond, 3)
 
     for a in anchors[:30]:
         try:
@@ -211,14 +171,12 @@ async def scrape_product(page, product, new_price):
             title = max(candidates, key=len) if candidates else query.title()
 
             location = next(
-                (t for t in texts if any(c in t for c in CITY_NAMES)),
-                "Nearby"
+                (t for t in texts if any(c in t for c in CITY_NAMES)), "Nearby"
             )
 
             cond, cond_label = classify_condition(title)
             discount = (new_price - price) / new_price
-            is_deal = (cond_rank.get(cond, 0) >= target_rank
-                       and discount >= threshold)
+            is_deal  = (cond_rank.get(cond, 0) >= target_rank and discount >= threshold)
 
             listings.append({
                 "title":      title[:80],
@@ -304,8 +262,7 @@ def send_deal_email(product, deals, new_price):
 
     html = f"""<html><body style="font-family:sans-serif;max-width:640px;margin:auto;padding:24px">
       <h2>Deal alert: {product['name']}</h2>
-      <p style="color:#555">{len(deals)} listing(s): {product.get('condition','like_new').replace('_',' ').title()}
-         + {int(product.get('threshold',0.3)*100)}%+ off
+      <p style="color:#555">{len(deals)} listing(s) matched your criteria
          · Markham / Richmond Hill / Vaughan / Aurora / Newmarket</p>
       <table width="100%" style="border-collapse:collapse;font-size:14px">
         <thead><tr style="background:#f5f5f5;text-align:left">
@@ -325,7 +282,7 @@ def send_deal_email(product, deals, new_price):
 
     msg = MIMEMultipart("alternative")
     msg["Subject"] = (f"Deal alert: {product['name']} "
-                      f"({len(deals)} match{'es' if len(deals)>1 else ''})")
+                      f"({len(deals)} match{'es' if len(deals) > 1 else ''})")
     msg["From"]    = GMAIL_EMAIL
     msg["To"]      = NOTIFY_EMAIL
     msg.attach(MIMEText(html, "html"))
@@ -375,7 +332,8 @@ async def main():
 
             print("   Scraping Facebook Marketplace...")
             listings = await scrape_product(page, product, new_price)
-            await page.screenshot(path=f"debug_marketplace_{product['id']}.png", full_page=False)
+            await page.screenshot(path=f"debug_marketplace_{product['id']}.png",
+                                  full_page=False)
             print(f"   {len(listings)} listings parsed")
 
             deals = [l for l in listings if l["is_deal"]]
