@@ -1,3 +1,13 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "water-table-mphf1b1p",
+      "name": "water table",
+      "query": "water table",
+      "new_price": 80,
+      "threshold": 0.3,
+      "condition": "new",
+      "added_at": "2026-05-22T21:12:28.717Z"
+    }
+  ]
 }
