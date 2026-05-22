@@ -33,8 +33,7 @@ jobs:
 
       - name: Run scraper
         env:
-          FB_EMAIL:           ${{ secrets.FB_EMAIL }}
-          FB_PASSWORD:        ${{ secrets.FB_PASSWORD }}
+          FB_COOKIES:         ${{ secrets.FB_COOKIES }}
           GMAIL_EMAIL:        ${{ secrets.GMAIL_EMAIL }}
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           NOTIFY_EMAIL:       ${{ secrets.NOTIFY_EMAIL }}
