@@ -1,0 +1,23 @@
+{
+  "product": {
+    "id": "step-2-water-table-mpg71twf",
+    "name": "Step 2 Water Table",
+    "query": "step 2 water table",
+    "new_price": 104,
+    "threshold": 0.3,
+    "condition": "like_new",
+    "added_at": "2026-05-22T00:41:10.047Z"
+  },
+  "new_price": 104.0,
+  "threshold": 72.8,
+  "last_checked": "2026-05-22T00:42:34.776804",
+  "listings": [],
+  "history": [
+    {
+      "checked_at": "2026-05-22T00:42:34.776788",
+      "new_price": 104.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
+}
