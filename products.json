@@ -8,6 +8,15 @@
       "threshold": 0.3,
       "condition": "like_new",
       "added_at": "2026-05-22T04:11:54.415Z"
+    },
+    {
+      "id": "night-stand-mpgez795",
+      "name": "Night stand",
+      "query": "night stand",
+      "new_price": 50,
+      "threshold": 0.3,
+      "condition": "like_new",
+      "added_at": "2026-05-22T04:23:04.313Z"
     }
   ]
 }
