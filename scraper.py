@@ -363,7 +363,7 @@ async def main():
         page = await ctx.new_page()
 
         print("\n[1] Logging into Facebook...")
-        await fb_login(page)
+        await fb_login(ctx, page)
         await page.screenshot(path="debug_login.png", full_page=False)
         print(f"   URL after login: {page.url}")
 
