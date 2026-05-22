@@ -1,0 +1,310 @@
+{
+  "product": {
+    "id": "water-table-mpgekucv",
+    "name": "Water table",
+    "query": "water table",
+    "new_price": 104,
+    "threshold": 0.3,
+    "condition": "like_new",
+    "added_at": "2026-05-22T04:11:54.415Z"
+  },
+  "new_price": 104.0,
+  "threshold": 72.8,
+  "last_checked": "2026-05-22T04:16:50.207309",
+  "listings": [
+    {
+      "title": "Bnib picnic mat. Bottom water Resistance, inside is fleece. Around 57\" x 45\"",
+      "price": 5.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 95.2,
+      "link": "https://www.facebook.com/marketplace/item/969139702430390/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.783029"
+    },
+    {
+      "title": "Baby splash pad/pool",
+      "price": 20.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 80.8,
+      "link": "https://www.facebook.com/marketplace/item/2749656715410461/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.646258"
+    },
+    {
+      "title": "Step2 Rocking Horse+Free Ride On",
+      "price": 20.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 80.8,
+      "link": "https://www.facebook.com/marketplace/item/1984952915421951/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.729115"
+    },
+    {
+      "title": "Pickering, ON",
+      "price": 20.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 80.8,
+      "link": "https://www.facebook.com/marketplace/item/1634718777544701/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.815413"
+    },
+    {
+      "title": "Vaughan, ON",
+      "price": 20.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 80.8,
+      "link": "https://www.facebook.com/marketplace/item/930904289717922/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:50.022428"
+    },
+    {
+      "title": "55 Gallon Water Barrel",
+      "price": 25.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 76.0,
+      "link": "https://www.facebook.com/marketplace/item/25840337972299054/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.712685"
+    },
+    {
+      "title": "Kids Table & Chair Set (2 Chairs) \u2013 Bright Colors",
+      "price": 40.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 61.5,
+      "link": "https://www.facebook.com/marketplace/item/1503306981372606/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.519794"
+    },
+    {
+      "title": "<brand new>Outdoor Storage Deck Box",
+      "price": 40.0,
+      "location": "Markham, ON",
+      "condition": "new",
+      "condLabel": "New",
+      "discount": 61.5,
+      "link": "https://www.facebook.com/marketplace/item/852323044558270/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T04:16:49.609256"
+    },
+    {
+      "title": "Aurora, ON",
+      "price": 40.0,
+      "location": "Aurora, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 61.5,
+      "link": "https://www.facebook.com/marketplace/item/2111911189385370/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.628732"
+    },
+    {
+      "title": "Indoor/Outdoor Sandbox",
+      "price": 45.0,
+      "location": "Newmarket, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 56.7,
+      "link": "https://www.facebook.com/marketplace/item/2117892685719089/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.557419"
+    },
+    {
+      "title": "Kids foldable picnic table and chairs",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 51.9,
+      "link": "https://www.facebook.com/marketplace/item/4299313350286652/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.573666"
+    },
+    {
+      "title": "Vintage IKEA Play Table Station Trolley with Wheels + Storage Shelf",
+      "price": 50.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 51.9,
+      "link": "https://www.facebook.com/marketplace/item/2239333310145601/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.746068"
+    },
+    {
+      "title": "Hape High Seas Wooden Toddler Rocking Ride-On Boat",
+      "price": 50.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 51.9,
+      "link": "https://www.facebook.com/marketplace/item/1021034980493158/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.927192"
+    },
+    {
+      "title": "Kids slide and table",
+      "price": 60.0,
+      "location": "Aurora, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 42.3,
+      "link": "https://www.facebook.com/marketplace/item/1528660492208941/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.592799"
+    },
+    {
+      "title": "Markham, ON",
+      "price": 70.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 32.7,
+      "link": "https://www.facebook.com/marketplace/item/27155455310705772/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.959433"
+    },
+    {
+      "title": "Sensory Table for Toddlers 1-3,Multifunction Play Sand Table with Double-Side Bo",
+      "price": 90.0,
+      "location": "King, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 13.5,
+      "link": "https://www.facebook.com/marketplace/item/1527319698838451/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.679093"
+    },
+    {
+      "title": "Step2 kids slide",
+      "price": 90.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 13.5,
+      "link": "https://www.facebook.com/marketplace/item/807436068909323/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.695747"
+    },
+    {
+      "title": "Kids outdoor play/ Teeter Totter / Seesaw",
+      "price": 100.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 3.8,
+      "link": "https://www.facebook.com/marketplace/item/1324700366293642/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.853854"
+    },
+    {
+      "title": "Funboy Inflatable Disco Dome",
+      "price": 100.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 3.8,
+      "link": "https://www.facebook.com/marketplace/item/1522320729524330/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.892108"
+    },
+    {
+      "title": "Little tykes bouncy castle",
+      "price": 200.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -92.3,
+      "link": "https://www.facebook.com/marketplace/item/1165248595714683/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.943591"
+    },
+    {
+      "title": "Bouncy Castle inflatables water Slide pit balls",
+      "price": 220.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -111.5,
+      "link": "https://www.facebook.com/marketplace/item/1493672968807231/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.662641"
+    },
+    {
+      "title": "New KidKraft Outdoor Sunview Cedar Lumber/Wooden Play Centre",
+      "price": 275.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -164.4,
+      "link": "https://www.facebook.com/marketplace/item/2548363902290391/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:50.006614"
+    },
+    {
+      "title": "TSSA Licensed Inflatable Slide Rentals | Bounce House & Bouncy Castle Rentals | ",
+      "price": 349.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -235.6,
+      "link": "https://www.facebook.com/marketplace/item/1289187880097130/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.990802"
+    },
+    {
+      "title": "Kids Play and Slide - Water Park",
+      "price": 350.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -236.5,
+      "link": "https://www.facebook.com/marketplace/item/785111540957662/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.974956"
+    },
+    {
+      "title": "Little Tikes Rocky Mountain Inflatable Water Park with climbing wall and basketb",
+      "price": 400.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -284.6,
+      "link": "https://www.facebook.com/marketplace/item/991720670306293/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.872816"
+    },
+    {
+      "title": "Happy Hop Water Slide",
+      "price": 400.0,
+      "location": "King, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -284.6,
+      "link": "https://www.facebook.com/marketplace/item/975335508345537/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3A64104bc4-3970-4da7-9517-b356f0f0e1bf&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:16:49.908147"
+    }
+  ],
+  "history": [
+    {
+      "checked_at": "2026-05-22T04:16:50.207286",
+      "new_price": 104.0,
+      "count": 26,
+      "deals": 1
+    }
+  ]
+}
