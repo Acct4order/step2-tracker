@@ -1,0 +1,23 @@
+{
+  "product": {
+    "id": "step-2-water-table-mpg755iv",
+    "name": "step 2 water table",
+    "query": "step 2 water table",
+    "new_price": 105,
+    "threshold": 0.3,
+    "condition": "unknown",
+    "added_at": "2026-05-22T00:43:45.079Z"
+  },
+  "new_price": 105.0,
+  "threshold": 73.5,
+  "last_checked": "2026-05-22T00:45:11.800730",
+  "listings": [],
+  "history": [
+    {
+      "checked_at": "2026-05-22T00:45:11.800713",
+      "new_price": 105.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
+}
