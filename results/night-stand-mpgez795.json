@@ -1,0 +1,343 @@
+{
+  "product": {
+    "id": "night-stand-mpgez795",
+    "name": "Night stand",
+    "query": "night stand",
+    "new_price": 50,
+    "threshold": 0.3,
+    "condition": "like_new",
+    "added_at": "2026-05-22T04:23:04.313Z"
+  },
+  "new_price": 50.0,
+  "threshold": 35.0,
+  "last_checked": "2026-05-22T04:24:10.158188",
+  "listings": [
+    {
+      "title": "Black nightstand",
+      "price": 15.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 70.0,
+      "link": "https://www.facebook.com/marketplace/item/2149055272584776/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.790132"
+    },
+    {
+      "title": "Night stand",
+      "price": 20.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 60.0,
+      "link": "https://www.facebook.com/marketplace/item/1449249443351175/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.856347"
+    },
+    {
+      "title": "Please Read Details Below.",
+      "price": 20.0,
+      "location": "Whitchurch-Stouffville, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 60.0,
+      "link": "https://www.facebook.com/marketplace/item/947878797857239/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.998385"
+    },
+    {
+      "title": "2 drawer fabric nightstand",
+      "price": 25.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 50.0,
+      "link": "https://www.facebook.com/marketplace/item/1442080230453153/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.683285"
+    },
+    {
+      "title": "Richmond Hill, ON",
+      "price": 28.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 44.0,
+      "link": "https://www.facebook.com/marketplace/item/4372369183090178/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.762727"
+    },
+    {
+      "title": "Dark brown nightstand marble top storage I have 6 Tables \ufffc",
+      "price": 30.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 40.0,
+      "link": "https://www.facebook.com/marketplace/item/923061340426698/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.643182"
+    },
+    {
+      "title": "Modern Black Nightstand",
+      "price": 30.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 40.0,
+      "link": "https://www.facebook.com/marketplace/item/838314585342398/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.870712"
+    },
+    {
+      "title": "Markham, ON",
+      "price": 38.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 24.0,
+      "link": "https://www.facebook.com/marketplace/item/3993868600841113/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.657950"
+    },
+    {
+      "title": "2 Drawer Night Stand",
+      "price": 40.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 20.0,
+      "link": "https://www.facebook.com/marketplace/item/813210798139324/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.913495"
+    },
+    {
+      "title": "ikea nightstand",
+      "price": 40.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 20.0,
+      "link": "https://www.facebook.com/marketplace/item/1894550407913119/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.949152"
+    },
+    {
+      "title": "Dark Brown 2-Drawer Nightstand",
+      "price": 40.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 20.0,
+      "link": "https://www.facebook.com/marketplace/item/847689171107898/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.972659"
+    },
+    {
+      "title": "Night stand (solid wood)",
+      "price": 45.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 10.0,
+      "link": "https://www.facebook.com/marketplace/item/952170420918848/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.750708"
+    },
+    {
+      "title": "Night stand",
+      "price": 45.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 10.0,
+      "link": "https://www.facebook.com/marketplace/item/803412442592657/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.925010"
+    },
+    {
+      "title": "Solid Wood Side Table / Nightstand",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/1512647670487983/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.736681"
+    },
+    {
+      "title": "Just listed",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/963961069727617/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.817272"
+    },
+    {
+      "title": "Moving sale!! Drawer night stand/side table",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/1541050247629105/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.829841"
+    },
+    {
+      "title": "Toronto, ON",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/1648170259564924/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.885866"
+    },
+    {
+      "title": "IKEA Bedroom / Office Furniture for Sale \u2013 Bed Frame, Mattress, Desk, Chair, Nig",
+      "price": 50.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/1494663352195123/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.960711"
+    },
+    {
+      "title": "bedside table on sale",
+      "price": 59.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -18.0,
+      "link": "https://www.facebook.com/marketplace/item/4387469204853127/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.774775"
+    },
+    {
+      "title": "Brand new Wood Nightstand with 2 Drawers",
+      "price": 60.0,
+      "location": "Pickering, ON",
+      "condition": "new",
+      "condLabel": "New",
+      "discount": -20.0,
+      "link": "https://www.facebook.com/marketplace/item/1185354133631220/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.671242"
+    },
+    {
+      "title": "Black Ikea Nightstands (2 available = 60 each)",
+      "price": 60.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -20.0,
+      "link": "https://www.facebook.com/marketplace/item/767540716085049/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.937240"
+    },
+    {
+      "title": "Night Stand",
+      "price": 60.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -20.0,
+      "link": "https://www.facebook.com/marketplace/item/26881728141516108/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.986560"
+    },
+    {
+      "title": "Whitchurch-Stouffville, ON",
+      "price": 75.0,
+      "location": "Whitchurch-Stouffville, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -50.0,
+      "link": "https://www.facebook.com/marketplace/item/2044625056437543/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.844048"
+    },
+    {
+      "title": "Nightstand with Charging Station and RGB Lights",
+      "price": 75.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -50.0,
+      "link": "https://www.facebook.com/marketplace/item/2074813013064985/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:10.010183"
+    },
+    {
+      "title": "Tall rattan and black night tables on clearance",
+      "price": 80.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -60.0,
+      "link": "https://www.facebook.com/marketplace/item/906274632447301/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:10.022680"
+    },
+    {
+      "title": "Night stand\uff08Oak)",
+      "price": 100.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -100.0,
+      "link": "https://www.facebook.com/marketplace/item/949722914575231/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.709711"
+    },
+    {
+      "title": "Toronto, ON",
+      "price": 100.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -100.0,
+      "link": "https://www.facebook.com/marketplace/item/1277416007921885/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.802546"
+    },
+    {
+      "title": "NEW-Floating Nightstand Set of 2",
+      "price": 125.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -150.0,
+      "link": "https://www.facebook.com/marketplace/item/1257211716395521/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.697477"
+    },
+    {
+      "title": "Wooden Nightstand with Drawer",
+      "price": 185.0,
+      "location": "Richmond Hill, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -270.0,
+      "link": "https://www.facebook.com/marketplace/item/1676553280451049/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ab4f5f33d-9687-42f1-8eb4-d6115a7027ba&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T04:24:09.898393"
+    }
+  ],
+  "history": [
+    {
+      "checked_at": "2026-05-22T04:24:10.158170",
+      "new_price": 50.0,
+      "count": 29,
+      "deals": 0
+    }
+  ]
+}
