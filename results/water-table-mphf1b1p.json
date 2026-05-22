@@ -1,0 +1,23 @@
+{
+  "product": {
+    "id": "water-table-mphf1b1p",
+    "name": "water table",
+    "query": "water table",
+    "new_price": 80,
+    "threshold": 0.3,
+    "condition": "new",
+    "added_at": "2026-05-22T21:12:28.717Z"
+  },
+  "new_price": 80.0,
+  "threshold": 56.0,
+  "last_checked": "2026-05-22T21:13:22.112225",
+  "listings": [],
+  "history": [
+    {
+      "checked_at": "2026-05-22T21:13:22.112206",
+      "new_price": 80.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
+}
