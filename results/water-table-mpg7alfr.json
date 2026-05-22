@@ -10,8 +10,317 @@
   },
   "new_price": 80.0,
   "threshold": 56.0,
-  "last_checked": "2026-05-22T01:15:57.992946",
-  "listings": [],
+  "last_checked": "2026-05-22T03:50:07.092052",
+  "listings": [
+    {
+      "title": "Kids Outdoor Mud Kitchen",
+      "price": 1.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 98.8,
+      "link": "https://www.facebook.com/marketplace/item/2856558024551289/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.500128"
+    },
+    {
+      "title": "Four Large Toys/Baby Items",
+      "price": 1.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 98.8,
+      "link": "https://www.facebook.com/marketplace/item/35299254416356915/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.682671"
+    },
+    {
+      "title": "Kinetic Sand & accessories",
+      "price": 5.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 93.8,
+      "link": "https://www.facebook.com/marketplace/item/1811758782874199/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.759319"
+    },
+    {
+      "title": "Little tykes table and sink",
+      "price": 10.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 87.5,
+      "link": "https://www.facebook.com/marketplace/item/1906474650055956/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.583279"
+    },
+    {
+      "title": "Kids Toy Bundle, including a building block table",
+      "price": 15.0,
+      "location": "Whitchurch-Stouffville, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 81.2,
+      "link": "https://www.facebook.com/marketplace/item/1552729472938648/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.467238"
+    },
+    {
+      "title": "(New) Swimways Sun Canopy Baby Boat",
+      "price": 15.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 81.2,
+      "link": "https://www.facebook.com/marketplace/item/4409066629409305/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.703660"
+    },
+    {
+      "title": "Unicorn Pool",
+      "price": 20.0,
+      "location": "Aurora, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 75.0,
+      "link": "https://www.facebook.com/marketplace/item/1525792059337712/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.516186"
+    },
+    {
+      "title": "Markham, ON",
+      "price": 20.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 75.0,
+      "link": "https://www.facebook.com/marketplace/item/2153199745469296/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.599408"
+    },
+    {
+      "title": "Little Tikes Stem Jr Play stand",
+      "price": 20.0,
+      "location": "Ajax, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 75.0,
+      "link": "https://www.facebook.com/marketplace/item/951291724117966/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.666477"
+    },
+    {
+      "title": "Little Tikes 3-in-1 Sports Zone",
+      "price": 25.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 68.8,
+      "link": "https://www.facebook.com/marketplace/item/1456935589465874/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.551064"
+    },
+    {
+      "title": "Fisher-Price Laugh & Learn All-in-One Sports Arena, English, Ages 1+",
+      "price": 25.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 68.8,
+      "link": "https://www.facebook.com/marketplace/item/2082487259150707/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.567593"
+    },
+    {
+      "title": "Playmobil 6673 Baby Pool with Slide",
+      "price": 30.0,
+      "location": "Whitchurch-Stouffville, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 62.5,
+      "link": "https://www.facebook.com/marketplace/item/1212863297726623/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.434329"
+    },
+    {
+      "title": "Happy whale seesaw fisher price",
+      "price": 30.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 62.5,
+      "link": "https://www.facebook.com/marketplace/item/1465504154513656/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.775544"
+    },
+    {
+      "title": "Sale! -Multi Purpose Play Table With Chair / Sensory/ Water Play / Study Table F",
+      "price": 35.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 56.2,
+      "link": "https://www.facebook.com/marketplace/item/2762602844086731/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.451202"
+    },
+    {
+      "title": "Markham, ON",
+      "price": 40.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 50.0,
+      "link": "https://www.facebook.com/marketplace/item/1000005969137036/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.414439"
+    },
+    {
+      "title": "Sand and water play set",
+      "price": 40.0,
+      "location": "Markham, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 50.0,
+      "link": "https://www.facebook.com/marketplace/item/970534205318228/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.720531"
+    },
+    {
+      "title": "Kids Table & Chair Set (2 Chairs) \u2013 Bright Colors",
+      "price": 40.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 50.0,
+      "link": "https://www.facebook.com/marketplace/item/1503306981372606/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.791938"
+    },
+    {
+      "title": "<brand new>Outdoor Storage Deck Box",
+      "price": 40.0,
+      "location": "Markham, ON",
+      "condition": "new",
+      "condLabel": "New",
+      "discount": 50.0,
+      "link": "https://www.facebook.com/marketplace/item/852323044558270/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.878153"
+    },
+    {
+      "title": "Indoor/Outdoor Sandbox",
+      "price": 45.0,
+      "location": "Newmarket, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 43.8,
+      "link": "https://www.facebook.com/marketplace/item/2117892685719089/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.827651"
+    },
+    {
+      "title": "Playmobil Aqua sets for 1-5 year old",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 37.5,
+      "link": "https://www.facebook.com/marketplace/item/2097828894088984/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.532923"
+    },
+    {
+      "title": "Banzai Inflatable Activity Pool",
+      "price": 50.0,
+      "location": "Vaughan, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 37.5,
+      "link": "https://www.facebook.com/marketplace/item/822938647002244/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.616288"
+    },
+    {
+      "title": "Kids foldable picnic table and chairs",
+      "price": 50.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 37.5,
+      "link": "https://www.facebook.com/marketplace/item/4299313350286652/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": true,
+      "scraped_at": "2026-05-22T03:50:06.843294"
+    },
+    {
+      "title": "Kids slide and table",
+      "price": 60.0,
+      "location": "Aurora, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 25.0,
+      "link": "https://www.facebook.com/marketplace/item/1528660492208941/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T03:50:06.862195"
+    },
+    {
+      "title": "Newmarket, ON",
+      "price": 70.0,
+      "location": "Newmarket, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 12.5,
+      "link": "https://www.facebook.com/marketplace/item/2510292552735139/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T03:50:06.394237"
+    },
+    {
+      "title": "Little tikes Turtle sand box",
+      "price": 80.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": 0.0,
+      "link": "https://www.facebook.com/marketplace/item/2811508322535149/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T03:50:06.376839"
+    },
+    {
+      "title": "Multi-family garage sale (Rain or Shine) 8am-12pm",
+      "price": 123.0,
+      "location": "Pickering, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -53.8,
+      "link": "https://www.facebook.com/marketplace/item/3147608702293302/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T03:50:06.740625"
+    },
+    {
+      "title": "Warehouse clearance, Wooden Playhouse with small play sink",
+      "price": 150.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -87.5,
+      "link": "https://www.facebook.com/marketplace/item/1774306743544262/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T03:50:06.632471"
+    },
+    {
+      "title": "The Sensory Station",
+      "price": 230.0,
+      "location": "Toronto, ON",
+      "condition": "unknown",
+      "condLabel": "Unknown",
+      "discount": -187.5,
+      "link": "https://www.facebook.com/marketplace/item/2630130887423678/?ref=search&referral_code=null&referral_story_type=post&tracking=browse_serp%3Ac95339c9-86da-414d-8393-aacc54a4b288&__tn__=!%3AD",
+      "is_deal": false,
+      "scraped_at": "2026-05-22T03:50:06.483358"
+    }
+  ],
   "history": [
     {
       "checked_at": "2026-05-22T00:49:21.092248",
@@ -30,6 +339,12 @@
       "new_price": 80.0,
       "count": 0,
       "deals": 0
+    },
+    {
+      "checked_at": "2026-05-22T03:50:07.092031",
+      "new_price": 80.0,
+      "count": 28,
+      "deals": 22
     }
   ]
 }
