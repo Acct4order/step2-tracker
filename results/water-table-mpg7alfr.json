@@ -1,0 +1,23 @@
+{
+  "product": {
+    "id": "water-table-mpg7alfr",
+    "name": "water table",
+    "query": "water table",
+    "new_price": 80,
+    "threshold": 0.3,
+    "condition": "unknown",
+    "added_at": "2026-05-22T00:47:58.983Z"
+  },
+  "new_price": 80.0,
+  "threshold": 56.0,
+  "last_checked": "2026-05-22T00:49:21.092266",
+  "listings": [],
+  "history": [
+    {
+      "checked_at": "2026-05-22T00:49:21.092248",
+      "new_price": 80.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
+}
