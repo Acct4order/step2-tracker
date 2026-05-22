@@ -1,3 +1,13 @@
 {
-  "products": []
+  "products": [
+    {
+      "id": "water-table-mpg7alfr",
+      "name": "water table",
+      "query": "water table",
+      "new_price": 80,
+      "threshold": 0.3,
+      "condition": "unknown",
+      "added_at": "2026-05-22T00:47:58.983Z"
+    }
+  ]
 }
