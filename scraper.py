@@ -159,6 +159,12 @@ async def scrape_product(page, product, new_price):
 
     anchors = await page.query_selector_all('a[href*="/marketplace/item/"]')
     print(f"   Found {len(anchors)} raw anchor(s)")
+    print(f"   Page URL: {page.url}")
+    print(f"   Page title: {await page.title()}")
+    # print a sample of all hrefs on the page for debugging
+    all_links = await page.query_selector_all('a[href]')
+    sample = [await a.get_attribute('href') for a in all_links[:8]]
+    print(f"   Sample hrefs: {sample}")
 
     seen, listings = set(), []
     cond_rank = {"new": 4, "like_new": 3, "good": 2, "fair": 1, "unknown": 0}
@@ -348,6 +354,8 @@ async def main():
 
         print("\n[1] Logging into Facebook...")
         await fb_login(page)
+        await page.screenshot(path="debug_login.png", full_page=False)
+        print(f"   URL after login: {page.url}")
 
         for i, product in enumerate(products, 1):
             print(f"\n[Product {i}/{len(products)}] {product['name']}")
@@ -357,6 +365,7 @@ async def main():
 
             print("   Scraping Facebook Marketplace...")
             listings = await scrape_product(page, product, new_price)
+            await page.screenshot(path=f"debug_marketplace_{product['id']}.png", full_page=False)
             print(f"   {len(listings)} listings parsed")
 
             deals = [l for l in listings if l["is_deal"]]
