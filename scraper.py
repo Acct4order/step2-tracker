@@ -127,8 +127,18 @@ async def fb_login(page):
 
     await page.wait_for_timeout(6000)
 
-    if "checkpoint" in page.url or "two_step" in page.url:
+    url = page.url
+    print(f"   URL after login: {url}")
+
+    if "checkpoint" in url or "two_step" in url:
         raise RuntimeError("Facebook is asking for 2FA — disable it on this account")
+
+    # still on login page = credentials rejected or IP blocked
+    if "login" in url or url.rstrip("/").endswith("facebook.com"):
+        raise RuntimeError(
+            "Login failed — Facebook rejected the credentials or blocked this IP. "
+            "Check your FB_PASSWORD secret, or try logging in manually to unblock the account."
+        )
 
     print("   Facebook login OK")
 
