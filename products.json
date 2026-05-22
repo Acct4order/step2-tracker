@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "id": "water-table-mpgekucv",
-      "name": "Water table",
-      "query": "water table",
-      "new_price": 104,
-      "threshold": 0.3,
-      "condition": "like_new",
-      "added_at": "2026-05-22T04:11:54.415Z"
-    },
-    {
       "id": "console-desk-mpgfapf5",
       "name": "console desk",
       "query": "console desk",
