@@ -17,15 +17,6 @@
       "threshold": 0.3,
       "condition": "like_new",
       "added_at": "2026-05-22T00:41:10.047Z"
-    },
-    {
-      "id": "step-2-water-table-mpg755iv",
-      "name": "step 2 water table",
-      "query": "step 2 water table",
-      "new_price": 105,
-      "threshold": 0.3,
-      "condition": "unknown",
-      "added_at": "2026-05-22T00:43:45.079Z"
     }
   ]
 }
