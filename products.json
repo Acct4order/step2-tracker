@@ -1,15 +1,6 @@
 {
   "products": [
     {
-      "id": "water-table-mpiv1e4n",
-      "name": "water table",
-      "query": "water table",
-      "new_price": 104,
-      "threshold": 0.3,
-      "condition": "like_new",
-      "added_at": "2026-05-23T21:28:12.743Z"
-    },
-    {
       "id": "nightstand-mpiv3x5q",
       "name": "Nightstand",
       "query": "nightstand",
