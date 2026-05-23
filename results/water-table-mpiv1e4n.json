@@ -1,0 +1,23 @@
+{
+  "product": {
+    "id": "water-table-mpiv1e4n",
+    "name": "water table",
+    "query": "water table",
+    "new_price": 104,
+    "threshold": 0.3,
+    "condition": "like_new",
+    "added_at": "2026-05-23T21:28:12.743Z"
+  },
+  "new_price": 104.0,
+  "threshold": 72.8,
+  "last_checked": "2026-05-23T21:29:06.742235",
+  "listings": [],
+  "history": [
+    {
+      "checked_at": "2026-05-23T21:29:06.742218",
+      "new_price": 104.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
+}
