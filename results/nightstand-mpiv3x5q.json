@@ -1,0 +1,23 @@
+{
+  "product": {
+    "id": "nightstand-mpiv3x5q",
+    "name": "Nightstand",
+    "query": "nightstand",
+    "new_price": 100,
+    "threshold": 0.3,
+    "condition": "like_new",
+    "added_at": "2026-05-23T21:30:10.718Z"
+  },
+  "new_price": 100.0,
+  "threshold": 70.0,
+  "last_checked": "2026-05-23T21:31:10.557828",
+  "listings": [],
+  "history": [
+    {
+      "checked_at": "2026-05-23T21:31:10.557810",
+      "new_price": 100.0,
+      "count": 0,
+      "deals": 0
+    }
+  ]
+}
