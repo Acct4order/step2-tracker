@@ -8,6 +8,15 @@
       "threshold": 0.3,
       "condition": "like_new",
       "added_at": "2026-05-23T21:28:12.743Z"
+    },
+    {
+      "id": "nightstand-mpiv3x5q",
+      "name": "Nightstand",
+      "query": "nightstand",
+      "new_price": 100,
+      "threshold": 0.3,
+      "condition": "like_new",
+      "added_at": "2026-05-23T21:30:10.718Z"
     }
   ]
 }
