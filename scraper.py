@@ -110,6 +110,17 @@ async def fb_login(ctx, page):
     await page.goto("https://www.facebook.com/", wait_until="domcontentloaded", timeout=30000)
     await page.wait_for_timeout(2000)
 
+    # handle profile selector ("Continue as Mike Smith")
+    for sel in ['button:has-text("Continue")', '[data-testid="profile-selector-continue"]',
+                'div[role="button"]:has-text("Continue")']:
+        try:
+            await page.click(sel, timeout=3000)
+            await page.wait_for_timeout(3000)
+            print("   Clicked Continue on profile selector")
+            break
+        except Exception:
+            pass
+
     if "login" in page.url:
         raise RuntimeError(
             "Cookies are invalid or expired — re-export from Cookie-Editor and update FB_COOKIES secret"
