@@ -106,25 +106,27 @@ async def fb_login(ctx, page):
         cookies.append(ck)
 
     await ctx.add_cookies(cookies)
-
     await page.goto("https://www.facebook.com/", wait_until="domcontentloaded", timeout=30000)
-    await page.wait_for_timeout(2000)
+    await page.wait_for_timeout(3000)
 
-    # handle profile selector ("Continue as Mike Smith")
-    for sel in ['button:has-text("Continue")', '[data-testid="profile-selector-continue"]',
-                'div[role="button"]:has-text("Continue")']:
+    # dismiss any blocking dialogs (profile selector, cookie consent, notifications)
+    for txt in ["Continue", "OK", "Accept all", "Allow", "Not now", "Close", "Skip"]:
         try:
-            await page.click(sel, timeout=3000)
-            await page.wait_for_timeout(3000)
-            print("   Clicked Continue on profile selector")
-            break
+            await page.click(f'div[role="button"]:has-text("{txt}")', timeout=2000)
+            await page.wait_for_timeout(1500)
+        except Exception:
+            pass
+        try:
+            await page.click(f'button:has-text("{txt}")', timeout=1000)
+            await page.wait_for_timeout(1500)
         except Exception:
             pass
 
+    await page.wait_for_timeout(2000)
+    print(f"   URL after login: {page.url}")
+
     if "login" in page.url:
-        raise RuntimeError(
-            "Cookies are invalid or expired — re-export from Cookie-Editor and update FB_COOKIES secret"
-        )
+        raise RuntimeError("Cookies expired — re-export from Cookie-Editor and update FB_COOKIES")
     print("   Facebook login OK (cookie auth)")
 
 # ── 3. scrape one product ─────────────────────────────────────────────────
@@ -144,11 +146,31 @@ async def scrape_product(page, product, new_price):
     anchors = []
     for url in urls:
         await page.goto(url, wait_until="domcontentloaded", timeout=30000)
-        await page.wait_for_timeout(4000)
+        await page.wait_for_timeout(5000)
+
+        # dismiss any dialogs that appear on marketplace
+        for txt in ["Not now", "Close", "Skip", "OK", "Allow"]:
+            try:
+                await page.click(f'div[role="button"]:has-text("{txt}")', timeout=1500)
+            except Exception:
+                pass
+
+        # scroll to trigger lazy loading
+        for _ in range(5):
+            await page.keyboard.press("End")
+            await page.wait_for_timeout(1500)
+
+        # wait up to 8s for listings to appear
+        try:
+            await page.wait_for_selector('a[href*="/marketplace/item/"]', timeout=8000)
+        except Exception:
+            print(f"   No listings appeared at {url}")
+
         anchors = await page.query_selector_all('a[href*="/marketplace/item/"]')
         if anchors:
+            print(f"   Found listings at: {url}")
             break
-        print(f"   No listings at {url}, trying next...")
+        print(f"   0 at {url}, trying next...")
 
     for _ in range(4):
         await page.keyboard.press("End")
