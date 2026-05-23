@@ -36,12 +36,11 @@ def is_relevant(title, query):
     # exact phrase match
     if q in t:
         return True
-    # require at least half the meaningful words to appear in the title
-    words = [w for w in q.split() if len(w) > 2]
+    # any single meaningful word from the query appears in the title
+    words = [w for w in q.split() if len(w) > 3]
     if not words:
         return True
-    matches = sum(1 for w in words if w in t)
-    return matches >= max(2, len(words) // 2)
+    return any(w in t for w in words)
 
 def classify_condition(text):
     t = text.lower()
