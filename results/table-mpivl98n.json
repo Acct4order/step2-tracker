@@ -10,7 +10,7 @@
   },
   "new_price": 100.0,
   "threshold": 70.0,
-  "last_checked": "2026-05-23T21:52:41.294632",
+  "last_checked": "2026-05-24T03:05:52.588945",
   "listings": [],
   "history": [
     {
@@ -27,6 +27,12 @@
     },
     {
       "checked_at": "2026-05-23T21:52:41.294611",
+      "new_price": 100.0,
+      "count": 0,
+      "deals": 0
+    },
+    {
+      "checked_at": "2026-05-24T03:05:52.588928",
       "new_price": 100.0,
       "count": 0,
       "deals": 0
